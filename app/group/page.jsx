@@ -8,7 +8,7 @@ import { IG_DIRECT, BASE } from '../../lib/site';
 export const metadata = {
   title: 'Група для дітей 5–8 років «Говорити, а не кричати»',
   description:
-    'Маленька онлайн-група про емоції, дружбу і самоконтроль для дітей 5–8 років. 8 зустрічей по 50 хвилин, 4–5 дітей, 700 грн за зустріч. Безкоштовне знайомство перед стартом.',
+    'Маленька онлайн-група про емоції, дружбу і самоконтроль для дітей 5–8 років. 8 зустрічей по 50 хвилин, 4–5 дітей, 800 грн за зустріч. Безкоштовне знайомство перед стартом.',
   alternates: { canonical: '/group/' },
   openGraph: {
     title: 'Група для дітей 5–8 років «Говорити, а не кричати»',
@@ -147,7 +147,7 @@ export default function GroupPage() {
               <div className="fact"><b>50 хв</b><span>одна зустріч</span></div>
               <div className="fact"><b>1×</b><span>на тиждень</span></div>
               <div className="fact"><b>онлайн</b><span>формат</span></div>
-              <div className="fact"><b>700 ₴</b><span>за зустріч</span></div>
+              <div className="fact"><b>800 ₴</b><span>за зустріч</span></div>
             </div>
             <div className="monster-row" style={{ marginTop: 24 }}>
               <img className="monster" src={`${BASE}/assets/monsters/m_calendar.png`} alt="Монстрик" />

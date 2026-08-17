@@ -88,7 +88,7 @@ export default function HomePage() {
           <div>
             <div className="hero-quote">Говорити, а не кричати</div>
             <h1>
-              Вчу дітей говорити про емоції — <em>а не показувати їх криком чи бійкою</em>
+              Вчу дітей розуміти свої емоції — <em>і говорити про них словами</em>
             </h1>
             <p className="lead">
               Дитячий психолог у Києві та онлайн для дітей 5–10 і підлітків 11–18 років. На
@@ -173,7 +173,7 @@ export default function HomePage() {
                 <span className="rn">II</span>
                 <div>
                   <h3>Дитина — як активний учасник змін</h3>
-                  <p>Не «об'єкт виховання», а партнер, який тренує нові навички.</p>
+                  <p>Партнер, який тренує нові навички і бачить власний прогрес.</p>
                 </div>
               </div>
               <div className="tri-row">
@@ -214,6 +214,7 @@ export default function HomePage() {
                 {s.d.map((p) => (
                   <p key={p}>{p}</p>
                 ))}
+                <div className="svc-price">1 700 ₴ · 50 хвилин</div>
                 <div className="who">
                   <span>Для кого</span>
                   {s.who}
@@ -294,7 +295,7 @@ export default function HomePage() {
               <div className="fact"><b>50 хв</b><span>одна зустріч</span></div>
               <div className="fact"><b>1×</b><span>на тиждень</span></div>
               <div className="fact"><b>онлайн</b><span>формат</span></div>
-              <div className="fact"><b>700 ₴</b><span>за зустріч</span></div>
+              <div className="fact"><b>800 ₴</b><span>за зустріч</span></div>
             </div>
           </div>
         </div>

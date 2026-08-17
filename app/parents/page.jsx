@@ -70,7 +70,7 @@ export default function ParentsPage() {
             <div className="fact"><b>50 хв</b><span>одна зустріч</span></div>
             <div className="fact"><b>онлайн</b><span>або Київ</span></div>
             <div className="fact"><b>1</b><span>зустрічі часто достатньо</span></div>
-            <div className="fact"><b>без</b><span>звинувачень</span></div>
+            <div className="fact"><b>1 700 ₴</b><span>за зустріч</span></div>
             <div className="fact"><b>прості</b><span>фрази й інструменти</span></div>
             <div className="fact"><b>для вас</b><span>і вашої дитини</span></div>
           </div>
@@ -100,7 +100,7 @@ export default function ParentsPage() {
             ))}
           </div>
           <p className="muted" data-reveal style={{ marginTop: 26 }}>
-            Вартість і розклад надішлю у відповідь на заявку.
+            Зустріч триває 50 хвилин, вартість — 1 700 ₴. Розклад надішлю у відповідь на заявку.
           </p>
         </div>
       </section>
