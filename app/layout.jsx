@@ -62,6 +62,7 @@ const jsonLd = {
   url: SITE_URL,
   image: `${SITE_URL}/assets/og.jpg`,
   priceRange: '800–1700 UAH',
+  foundingDate: '2019',
   sameAs: ['https://www.instagram.com/with.matvii/'],
   founder: {
     '@type': 'Person',

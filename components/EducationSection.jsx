@@ -44,6 +44,9 @@ export default function EducationSection() {
         <h2 data-reveal>
           Базова освіта — <em>і навчання, що не зупиняється</em>
         </h2>
+        <p className="lede" data-reveal>
+          Працюю з дітьми і родинами з 2019 року — і щороку додаю до практики нові підходи.
+        </p>
         <div className="edu-grid">
           <button
             type="button"

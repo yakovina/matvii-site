@@ -93,6 +93,7 @@ export default function HomePage() {
               <Link className="chip chip-link" href="/teens/">Підлітки 11–18 років →</Link>
               <Link className="chip chip-link" href="/parents/">Батьки →</Link>
               <span className="chip">Онлайн · Київ</span>
+              <span className="chip">У професії з 2019 року</span>
             </div>
             <div className="hero-actions">
               <a className="btn btn-orange" href="#contact">
