@@ -193,6 +193,8 @@ h2 em, h1 em { font-style: normal; color: var(--orange); }
 .chip:nth-child(2) { border-color: rgba(42, 168, 160, 0.5); color: #1c7f79; }
 .chip:nth-child(3) { border-color: rgba(155, 123, 220, 0.55); color: #7150b4; }
 .chip:nth-child(4) { border-color: rgba(255, 201, 60, 0.7); color: #9e7708; }
+.chip-link { text-decoration: none; cursor: pointer; transition: transform 0.18s ease, box-shadow 0.18s ease; }
+.chip-link:hover { transform: translateY(-2px); box-shadow: 0 8px 18px rgba(14, 77, 51, 0.14); }
 .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
 
 .portrait-frame { position: relative; max-width: 420px; justify-self: end; width: 100%; }
@@ -220,7 +222,9 @@ h2 em, h1 em { font-style: normal; color: var(--orange); }
   border: 1px solid var(--line); border-top: 5px solid var(--orange);
   box-shadow: 0 8px 24px rgba(14, 77, 51, 0.06);
   transition: transform 0.22s ease, box-shadow 0.22s ease;
+  text-decoration: none; color: inherit; display: block;
 }
+.pain-more { display: inline-block; margin-top: 12px; font-size: 0.84rem; font-weight: 800; color: var(--orange); }
 .pain-cell:hover { transform: translateY(-5px); box-shadow: 0 18px 38px rgba(14, 77, 51, 0.12); }
 .pain-cell:nth-child(2) { border-top-color: var(--teal); }
 .pain-cell:nth-child(3) { border-top-color: var(--sun); }

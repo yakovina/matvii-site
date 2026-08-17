@@ -5,10 +5,11 @@ import { createPortal } from 'react-dom';
 import Link from 'next/link';
 
 const LINKS = [
-  { href: '/#services', label: 'Формати' },
-  { href: '/#requests', label: 'Запити' },
-  { href: '/#education', label: 'Освіта' },
+  { href: '/children/', label: 'Дітям' },
+  { href: '/teens/', label: 'Підліткам' },
+  { href: '/parents/', label: 'Батькам' },
   { href: '/group/', label: 'Групові заняття' },
+  { href: '/#education', label: 'Освіта' },
   { href: '/#contact', label: 'Контакти' },
 ];
 

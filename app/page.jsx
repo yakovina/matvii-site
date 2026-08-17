@@ -19,18 +19,22 @@ const PAINS = [
   {
     t: 'Дитина 5–10',
     d: 'Істерики, крик або бійки: у момент злості їй важко зупинитися, а після — пояснити словами, що сталося.',
+    href: '/children/',
   },
   {
     t: 'Підліток 11–18',
     d: 'Замикається, огризається або зникає в телефоні. Контакт загубився, і будь-яка розмова ризикує стати сваркою.',
+    href: '/teens/',
   },
   {
     t: 'Серед однолітків',
     d: 'Складно знайти друзів, влитися в компанію, витримати відмову, програш чи насмішки.',
+    href: '/children/',
   },
   {
     t: 'Уся родина',
     d: 'Правила не працюють, прохання повторюються по десять разів, і напругу вдома відчувають усі.',
+    href: '/parents/',
   },
 ];
 
@@ -91,9 +95,9 @@ export default function HomePage() {
               зустрічах — гра і розмова, після них — конкретні фрази й інструменти для батьків.
             </p>
             <div className="hero-chips">
-              <span className="chip">Діти 5–10 років</span>
-              <span className="chip">Підлітки 11–18 років</span>
-              <span className="chip">Батьки</span>
+              <Link className="chip chip-link" href="/children/">Діти 5–10 років →</Link>
+              <Link className="chip chip-link" href="/teens/">Підлітки 11–18 років →</Link>
+              <Link className="chip chip-link" href="/parents/">Батьки →</Link>
               <span className="chip">Онлайн · Київ</span>
             </div>
             <div className="hero-actions">
@@ -125,11 +129,12 @@ export default function HomePage() {
           </h2>
           <div className="pain-grid" data-reveal>
             {PAINS.map((p, i) => (
-              <div className="pain-cell" key={p.t}>
+              <Link className="pain-cell" key={p.t} href={p.href}>
                 <span className="num">0{i + 1}</span>
                 <b>{p.t}</b>
                 <p>{p.d}</p>
-              </div>
+                <span className="pain-more">Детальніше →</span>
+              </Link>
             ))}
           </div>
           <p className="pain-note" data-reveal>
