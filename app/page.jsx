@@ -5,6 +5,7 @@ import RevealManager from '../components/RevealManager';
 import MobileCta from '../components/MobileCta';
 import ContactSection from '../components/ContactSection';
 import EducationSection from '../components/EducationSection';
+import FaqSection from '../components/FaqSection';
 import { BASE } from '../lib/site';
 
 export const metadata = {
@@ -261,6 +262,7 @@ export default function HomePage() {
         </div>
       </section>
 
+      <FaqSection />
       <ContactSection />
       <MobileCta />
       <Footer />

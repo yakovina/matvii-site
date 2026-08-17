@@ -54,11 +54,42 @@ const jsonLd = {
   '@type': 'ProfessionalService',
   name: 'Матвій Іванов — дитячий психолог',
   description:
-    'Дитячий психолог у Києві та онлайн: консультації для батьків, сімейні консультації, терапія для дітей і підлітків, психологічна група для дітей 5–8 років.',
-  areaServed: 'Київ, Україна (онлайн — будь-де)',
+    'Дитячий психолог у Києві та онлайн: консультації для батьків, сімейні консультації, терапія для дітей 5–10 і підлітків 11–18 років, психологічна група для дітей 5–8 років.',
+  areaServed: [
+    { '@type': 'City', name: 'Київ' },
+    { '@type': 'Country', name: 'Україна' },
+  ],
   url: SITE_URL,
   image: `${SITE_URL}/assets/og.jpg`,
+  priceRange: '800–1700 UAH',
   sameAs: ['https://www.instagram.com/with.matvii/'],
+  founder: {
+    '@type': 'Person',
+    name: 'Матвій Іванов',
+    jobTitle: 'Дитячий психолог',
+    alumniOf: {
+      '@type': 'CollegeOrUniversity',
+      name: 'Київський національний університет імені Тараса Шевченка',
+    },
+    knowsLanguage: 'uk',
+    image: `${SITE_URL}/assets/portrait.jpg`,
+  },
+  makesOffer: [
+    {
+      '@type': 'Offer',
+      name: 'Індивідуальна консультація (діти 5–10, підлітки 11–18, батьки)',
+      price: '1700',
+      priceCurrency: 'UAH',
+      description: 'Зустріч 50 хвилин, онлайн або в Києві.',
+    },
+    {
+      '@type': 'Offer',
+      name: 'Групові заняття для дітей 5–8 років «Говорити, а не кричати»',
+      price: '800',
+      priceCurrency: 'UAH',
+      description: '8 онлайн-зустрічей по 50 хвилин у групі з 4–5 дітей, раз на тиждень.',
+    },
+  ],
 };
 
 export default function RootLayout({ children }) {

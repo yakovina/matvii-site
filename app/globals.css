@@ -507,6 +507,8 @@ h2 em, h1 em { font-style: normal; color: var(--orange); }
 .acc .acc-body { padding: 0 18px 20px 84px; }
 .acc .acc-body p { font-size: 0.93rem; color: var(--ink-soft); margin-bottom: 10px; }
 .acc .acc-body p b { color: var(--green); }
+.faq-body { padding-left: 84px; }
+@media (max-width: 940px) { .faq-body { padding-left: 16px; } }
 .acc .train-label { margin-bottom: 4px; }
 .train-list { list-style: none; margin: 0 0 12px; }
 .train-list li { position: relative; padding: 4px 0 4px 24px; font-size: 0.92rem; color: var(--ink-soft); }
