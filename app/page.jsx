@@ -4,7 +4,6 @@ import Footer from '../components/Footer';
 import RevealManager from '../components/RevealManager';
 import MobileCta from '../components/MobileCta';
 import ContactSection from '../components/ContactSection';
-import RequestsExplorer from '../components/RequestsExplorer';
 import EducationSection from '../components/EducationSection';
 import { BASE } from '../lib/site';
 
@@ -67,13 +66,6 @@ const SERVICES_CARDS = [
     who: 'Дітям 5–10 і підліткам 11–18 років',
     feature: true,
   },
-];
-
-const STEPS = [
-  { t: 'Заявка', d: 'Залишаєте заявку на сайті або пишете в Direct — я відповідаю особисто.' },
-  { t: 'Знайомство', d: 'Коротка розмова про ваш запит, вік дитини та її складнощі — до 30 хвилин, безкоштовно.' },
-  { t: 'Контакт і напрям', d: 'Перші 2–3 зустрічі — формуємо довіру з дитиною і визначаємо, над чим працюємо.' },
-  { t: 'Динаміка', d: 'Близько 10 зустрічей — і видно результати. Ви отримуєте зворотний зв’язок і інструменти для дому.' },
 ];
 
 export default function HomePage() {
@@ -225,38 +217,6 @@ export default function HomePage() {
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* STEPS */}
-      <section className="steps">
-        <div className="wrap">
-          <div className="kicker" data-reveal>Як це працює</div>
-          <h2 data-reveal>Чотири кроки до перших змін</h2>
-          <div className="steps-grid">
-            {STEPS.map((s, i) => (
-              <div className="step-col" key={s.t} data-reveal>
-                <span className="sn">0{i + 1}</span>
-                <h3>{s.t}</h3>
-                <p>{s.d}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* REQUESTS */}
-      <section id="requests">
-        <div className="wrap">
-          <div className="kicker" data-reveal>Запити</div>
-          <h2 data-reveal>
-            З чим до мене приходять <em>найчастіше</em>
-          </h2>
-          <p className="lede" data-reveal>
-            Якщо ви впізнаєте свій запит у цьому списку — я зможу допомогти. Якщо ні, напишіть:
-            підкажу, чи це до мене, або порекомендую колег.
-          </p>
-          <RequestsExplorer />
         </div>
       </section>
 
