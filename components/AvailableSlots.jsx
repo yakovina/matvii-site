@@ -41,7 +41,7 @@ export default function AvailableSlots() {
           </span>
         ))}
       </div>
-      <p className="slots-note">{note}</p>
+      {note && <p className="slots-note">{note}</p>}
     </div>
   );
 }
