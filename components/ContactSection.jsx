@@ -1,4 +1,5 @@
 import ContactForm from './ContactForm';
+import AvailableSlots from './AvailableSlots';
 import { IG_DIRECT } from '../lib/site';
 
 export default function ContactSection({ defaultTopic }) {
@@ -13,6 +14,7 @@ export default function ContactSection({ defaultTopic }) {
             предметнішою.
           </p>
           <p>Відповідаю сам, зазвичай протягом дня.</p>
+          <AvailableSlots />
           <div className="contact-alt">
             Зручніше в месенджері? Напишіть у{' '}
             <a href={IG_DIRECT} target="_blank" rel="noopener noreferrer">
