@@ -33,7 +33,7 @@ export default function AvailableSlots() {
 
   return (
     <div className="slots-box">
-      <h3>Найближчі вільні вікна</h3>
+      <h3>Вільні години для консультацій</h3>
       <div className="slots-list">
         {slots.map((s) => (
           <span className="slot" key={s}>
