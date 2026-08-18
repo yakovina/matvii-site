@@ -582,6 +582,12 @@ h2 em, h1 em { font-style: normal; color: var(--orange); }
 }
 .quiz-back:hover { color: var(--orange); }
 .quiz-disclaimer { margin-top: 24px; font-size: 0.82rem; color: var(--ink-soft); }
+.quiz-block { margin-top: 22px; padding-top: 18px; border-top: 1px dashed var(--line); }
+.quiz-block-label {
+  display: inline-block; font-size: 0.72rem; font-weight: 800;
+  text-transform: uppercase; letter-spacing: 0.12em; color: var(--orange);
+  margin-bottom: 8px;
+}
 .quiz-banner {
   display: flex; align-items: center; gap: 18px; flex-wrap: wrap;
   background: var(--paper); border: 1px solid var(--line); border-radius: 20px;
