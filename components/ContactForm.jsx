@@ -10,6 +10,13 @@ export default function ContactForm({ defaultTopic }) {
     e.preventDefault();
     setStatus('sending');
     const data = Object.fromEntries(new FormData(e.target).entries());
+    // Якщо батьки проходили тест — додаємо його результат до заявки.
+    try {
+      const quiz = JSON.parse(localStorage.getItem('quizResult') || 'null');
+      if (quiz) {
+        data['Результат тесту'] = `вік: ${quiz.age}; ${quiz.level}; сфера: ${quiz.area}; бали: ${quiz.score}`;
+      }
+    } catch {}
     try {
       if (FORM_EMAIL.includes('REPLACE_ME')) throw new Error('form not configured');
       const res = await fetch(`https://formsubmit.co/ajax/${FORM_EMAIL}`, {

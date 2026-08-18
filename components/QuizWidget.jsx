@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { BASE } from '../lib/site';
 
@@ -10,7 +10,7 @@ const AGES = ['5–7 років', '8–10 років', '11–14 років', '15
 const QUESTIONS = [
   {
     area: 'emotions',
-    text: 'Дрібниця — не та чашка, програна гра, «ще п\'ять хвилин» — і вибух: крик, сльози, все летить на підлогу',
+    text: 'Дрібнички, такі як не та чашка, програна гра чи «ще п\'ять хвилин», закінчуються вибухом: крик, сльози, все летить на підлогу',
     teen: 'Дрібне зауваження — і у відповідь вибух або грюкнуті двері й мовчання на весь вечір',
   },
   {
@@ -19,7 +19,8 @@ const QUESTIONS = [
   },
   {
     area: 'emotions',
-    text: 'Ви вгадуєте настрій дитини по кроках у коридорі — і підлаштовуєте під нього весь вечір',
+    text: 'Настрій змінюється за мить: щойно сміялась — і вже сльози, а ви не встигаєте зрозуміти, що сталося',
+    teen: 'Ви вгадуєте настрій дитини по кроках у коридорі — і підлаштовуєте під нього весь вечір',
   },
   {
     area: 'social',
@@ -104,6 +105,29 @@ export default function QuizWidget() {
   const isTeen = age === 2 || age === 3;
   const total = QUESTIONS.length;
   const done = idx >= total && age !== null;
+
+  // Зберігаємо результат: якщо людина потім залишить заявку, він додасться до листа.
+  useEffect(() => {
+    if (!done) return;
+    const areaScores = { emotions: 0, social: 0, family: 0, stress: 0 };
+    QUESTIONS.forEach((q, i) => {
+      areaScores[q.area] += answers[i] ?? 0;
+    });
+    const totalScore = answers.reduce((s, a) => s + a, 0);
+    const top = Object.entries(areaScores).sort((a, b) => b[1] - a[1])[0][0];
+    const level = totalScore <= 6 ? 'у межах норми' : totalScore <= 13 ? 'є моменти, варті уваги' : 'рекомендована підтримка';
+    try {
+      localStorage.setItem(
+        'quizResult',
+        JSON.stringify({
+          age: AGES[age],
+          level,
+          area: AREA_INSIGHTS[top].name,
+          score: `${totalScore}/24`,
+        })
+      );
+    } catch {}
+  }, [done, answers, age]);
 
   const answer = (s) => {
     setAnswers([...answers.slice(0, idx), s]);
