@@ -6,7 +6,6 @@ import MobileCta from '../components/MobileCta';
 import ContactSection from '../components/ContactSection';
 import EducationSection from '../components/EducationSection';
 import FaqSection from '../components/FaqSection';
-import QuizBanner from '../components/QuizBanner';
 import { BASE } from '../lib/site';
 
 export const metadata = {
@@ -138,7 +137,32 @@ export default function HomePage() {
             За криком чи мовчанням завжди щось стоїть. Моя робота — допомогти це почути і
             сказати інакше.
           </p>
-          <QuizBanner />
+        </div>
+      </section>
+
+      {/* QUIZ CTA */}
+      <section style={{ paddingTop: 0 }}>
+        <div className="wrap">
+          <div className="quiz-cta" data-reveal>
+            <div className="monster-row" style={{ justifyContent: 'center', marginBottom: 20 }}>
+              <img className="monster" src={`${BASE}/assets/monsters/m_yellow.png`} alt="" />
+              <img className="monster" src={`${BASE}/assets/monsters/m_blue.png`} alt="" />
+              <img className="monster" src={`${BASE}/assets/monsters/m_purple.png`} alt="" />
+            </div>
+            <h2>Чи потрібен вашій дитині психолог?</h2>
+            <p>
+              12 життєвих ситуацій — і короткий підсумок: що зараз відбувається з дитиною, що
+              спробувати вдома вже сьогодні і з чого почати, якщо захочете підтримки.
+            </p>
+            <div className="quiz-cta-meta">
+              <span className="chip">≈ 3 хвилини</span>
+              <span className="chip">для батьків дітей 5–18</span>
+              <span className="chip">підсумок одразу</span>
+            </div>
+            <Link className="btn btn-orange btn-big" href="/quiz/">
+              Пройти тест <span className="arr">→</span>
+            </Link>
+          </div>
         </div>
       </section>
 
