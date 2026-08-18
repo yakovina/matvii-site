@@ -116,6 +116,11 @@ export default function QuizWidget() {
     const totalScore = answers.reduce((s, a) => s + a, 0);
     const top = Object.entries(areaScores).sort((a, b) => b[1] - a[1])[0][0];
     const level = totalScore <= 6 ? 'у межах норми' : totalScore <= 13 ? 'є моменти, варті уваги' : 'рекомендована підтримка';
+    const details = QUESTIONS.map((q, i) => {
+      const text = isTeen && q.teen ? q.teen : q.text;
+      const a = ANSWERS.find((x) => x.score === (answers[i] ?? 0));
+      return `${i + 1}. ${text} — ${a.label}`;
+    }).join('\n');
     try {
       localStorage.setItem(
         'quizResult',
@@ -124,10 +129,11 @@ export default function QuizWidget() {
           level,
           area: AREA_INSIGHTS[top].name,
           score: `${totalScore}/24`,
+          details,
         })
       );
     } catch {}
-  }, [done, answers, age]);
+  }, [done, answers, age, isTeen]);
 
   const answer = (s) => {
     setAnswers([...answers.slice(0, idx), s]);

@@ -15,6 +15,7 @@ export default function ContactForm({ defaultTopic }) {
       const quiz = JSON.parse(localStorage.getItem('quizResult') || 'null');
       if (quiz) {
         data['Результат тесту'] = `вік: ${quiz.age}; ${quiz.level}; сфера: ${quiz.area}; бали: ${quiz.score}`;
+        if (quiz.details) data['Відповіді тесту'] = quiz.details;
       }
     } catch {}
     try {
