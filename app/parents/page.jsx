@@ -3,6 +3,7 @@ import Footer from '../../components/Footer';
 import RevealManager from '../../components/RevealManager';
 import MobileCta from '../../components/MobileCta';
 import ContactSection from '../../components/ContactSection';
+import QuizBanner from '../../components/QuizBanner';
 
 export const metadata = {
   title: 'Батькам',
@@ -102,6 +103,12 @@ export default function ParentsPage() {
           <p className="muted" data-reveal style={{ marginTop: 26 }}>
             Зустріч триває 50 хвилин, вартість — 1 700 ₴. Розклад надішлю у відповідь на заявку.
           </p>
+        </div>
+      </section>
+
+      <section style={{ paddingTop: 0 }}>
+        <div className="wrap">
+          <QuizBanner />
         </div>
       </section>
 

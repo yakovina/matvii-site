@@ -5,6 +5,7 @@ import RevealManager from '../../components/RevealManager';
 import MobileCta from '../../components/MobileCta';
 import ContactSection from '../../components/ContactSection';
 import { BASE } from '../../lib/site';
+import QuizBanner from '../../components/QuizBanner';
 
 export const metadata = {
   title: 'Дітям 5–10 років',
@@ -114,6 +115,12 @@ export default function ChildrenPage() {
               </Link>
             </p>
           </div>
+        </div>
+      </section>
+
+      <section style={{ paddingTop: 0 }}>
+        <div className="wrap">
+          <QuizBanner />
         </div>
       </section>
 

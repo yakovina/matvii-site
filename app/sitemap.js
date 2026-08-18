@@ -9,5 +9,6 @@ export default function sitemap() {
     { url: `${SITE_URL}/children/`, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${SITE_URL}/teens/`, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${SITE_URL}/parents/`, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${SITE_URL}/quiz/`, changeFrequency: 'monthly', priority: 0.8 },
   ];
 }

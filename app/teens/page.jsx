@@ -3,6 +3,7 @@ import Footer from '../../components/Footer';
 import RevealManager from '../../components/RevealManager';
 import MobileCta from '../../components/MobileCta';
 import ContactSection from '../../components/ContactSection';
+import QuizBanner from '../../components/QuizBanner';
 
 export const metadata = {
   title: 'Підліткам 11–18 років',
@@ -94,6 +95,12 @@ export default function TeensPage() {
               </span>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section style={{ paddingTop: 0 }}>
+        <div className="wrap">
+          <QuizBanner />
         </div>
       </section>
 

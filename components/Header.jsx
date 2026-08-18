@@ -8,6 +8,7 @@ const LINKS = [
   { href: '/children/', label: 'Дітям' },
   { href: '/teens/', label: 'Підліткам' },
   { href: '/parents/', label: 'Батькам' },
+  { href: '/quiz/', label: 'Тест' },
   { href: '/group/', label: 'Групові заняття' },
   { href: '/#education', label: 'Освіта' },
   { href: '/#contact', label: 'Контакти' },
