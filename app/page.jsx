@@ -256,14 +256,14 @@ export default function HomePage() {
       <section className="gteaser on-dark">
         <div className="wrap gteaser-grid">
           <div data-reveal>
-            <span className="badge">Старт — початок жовтня · набір відкрито</span>
+            <span className="badge">Старт — початок листопада · набір відкрито</span>
             <h2>
               Групові заняття для дітей <em>5–8 років</em>
             </h2>
             <p>
               «Говорити, а не кричати» — маленька психологічна група про емоції, дружбу і
               самоконтроль. Через ігри й живе спілкування діти тренують навички, які важко
-              «пояснити» вдома словами. Наступна група стартує на початку жовтня.
+              «пояснити» вдома словами. Наступна група стартує на початку листопада.
             </p>
             <div className="monster-row" style={{ marginBottom: 28 }}>
               <img className="monster" src={`${BASE}/assets/monsters/m_orange.png`} alt="Монстрик" />
